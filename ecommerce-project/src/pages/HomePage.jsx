@@ -75,7 +75,7 @@ export function HomePage() {
             </div>
 
             <div className="product-spacer"></div>
-
+<div></div>
             <div className="added-to-cart">
               <img src="images/icons/checkmark.png" />
               Added
