@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React Basics</title>
+  </head>
+  <body>
+    <div class="js-container"></div>
+<script src="https://unpkg.com/supersimpledev@8.6.4/dayjs.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <!-- <script type="text/babel">
+    const productCost= 10+(2*8);
+    console.log(productCost);
+    const total=`Product cost:${productCost}`;
+    console.log(total);
+    const shippingCost=5;
+     const date=dayjs().format('MMMM D');
+        console.log(date);
+        const currentTime=dayjs().format('HH:mm:ss');
+    const div3=(
+        <div>
+            <p>Product cost:${productCost}</p>
+            <p>Shipping cost:${shippingCost}</p>
+            <p>Total cost:${productCost+shippingCost}</p>
+            <button>Place your order</button>
+             <p>Today is {date}</p>
+             <p>The current time:{currentTime}</p>
+
+            </div>
+       
+
+        )
+       
+        const container=document.querySelector('.js-container');
+        ReactDOM.createRoot(container).render(div3);
+</script> -->
+<script type="text/babel">
+    // const paragraph=<p>Current Time:{dayjs().format('HH:mm:ss')}</p>
+    const container=document.querySelector('.js-container');
+    const root=ReactDOM.createRoot(container);
+    root.render(paragraph);
+     setInterval(() => {
+        const paragraph = <p>Current time: {dayjs().format('HH:mm:ss')}</p>;
+       
+        root.render(paragraph);
+      }, 1000)
+
+
+</script>
+    <!-- <script type="text/babel">
+const button=<button>hello</button>;
+const paragraph=<p>paragraph of text</p>
+const div=(
+    <div>
+     <button>hello</button>
+     <p>paragraph of text</p>
+    </div>
+);
+  const div2=(
+    <div>
+        <h2>Cotton socks</h2>
+         <p>Price:$10</p>
+         <button>Add to Cart</button>
+    </div>
+ 
+  )
+
+      const container = document.querySelector('.js-container');
+      ReactDOM.createRoot(container).render(div2);
+    </script> -->
+  </body>
+</html>
