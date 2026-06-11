@@ -7,6 +7,14 @@ import cartIcon from "../assets/images/icons/cart-icon.png";
 import "./HomePage.css";
 
 export function HomePage() {
+
+fetch('http://localhost:3000/api/products').then((response)=>{
+response.json().then((data)=>{
+  console.log(data);
+});
+});
+
+
   return (
     <>
       <link rel="icon" type="image/svg+xml" href="images/home-favicon.png" />
