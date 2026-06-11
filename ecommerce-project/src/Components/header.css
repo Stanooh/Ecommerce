@@ -25,7 +25,7 @@
   }
 }
 
-.header .header-link {
+.header .header-NavLink {
   display: inline-block;
   padding: 6px 9.5px;
   border-radius: 2px;
@@ -34,7 +34,7 @@
   border: 1px solid rgba(0, 0, 0, 0);
 }
 
-.header .header-link:hover {
+.header .header-NavLink:hover {
   border: 1px solid white;
 }
 
@@ -103,7 +103,7 @@
   justify-content: end;
 }
 
-.header .orders-link {
+.header .orders-NavLink {
   color: white;
 
   display: flex;
@@ -118,7 +118,7 @@
   font-weight: 700;
 }
 
-.header .cart-link {
+.header .cart-NavLink {
   color: white;
   display: flex;
   align-items: center;
@@ -146,4 +146,12 @@
 
   width: 26px;
   text-align: center;
+}
+
+.header .orders-NavLink.active {
+  text-decoration: underline;
+}
+
+.header .cart-NavLink.active {
+  text-decoration: underline;
 }
