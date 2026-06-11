@@ -1,17 +1,15 @@
 import { Header } from "../Components/Header";
 import { products } from "../../starting-code/data/products";
+import axios from 'axios'
 
-import checkmark from "../assets/images/icons/checkmark.png";
 
 import cartIcon from "../assets/images/icons/cart-icon.png";
 import "./HomePage.css";
 
 export function HomePage() {
 
-fetch('http://localhost:3000/api/products').then((response)=>{
-response.json().then((data)=>{
-  console.log(data);
-});
+axios.get('http://localhost:3000/api/products').then((response)=>{
+console.log(response.data)
 });
 
 
