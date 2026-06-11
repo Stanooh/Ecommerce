@@ -1,16 +1,24 @@
 import { Header } from "../Components/Header";
-import { products } from "../../starting-code/data/products";
+
 import axios from 'axios'
+import {useEffect,useState} from 'react';
 
 
 import cartIcon from "../assets/images/icons/cart-icon.png";
 import "./HomePage.css";
 
-export function HomePage() {
 
+
+export function HomePage() {
+const [products,setProducts]=useState([]);
+
+
+useEffect(()=>{
 axios.get('http://localhost:3000/api/products').then((response)=>{
-console.log(response.data)
+setProducts(response.data)
 });
+},[]);
+
 
 
   return (
