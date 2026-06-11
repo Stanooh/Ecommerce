@@ -44,6 +44,7 @@ export default [
       'react/jsx-uses-react': 'off',
 
       'react-refresh/only-export-components': 'warn',
+      'react/prop-types':'off'
     },
   },
 ]
