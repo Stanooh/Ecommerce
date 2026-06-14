@@ -6,10 +6,12 @@ import { CheckoutPage } from "./pages/checkout/CheckoutPage";
 import { OrdersPage } from "./pages/orders/OrdersPage";
 import { TrackingPage } from "./pages/TrackingPage";
 import { NotFound } from "./pages/NotFound";
+
 import "./App.css";
 
 function App() {
   const [cart, setCart] = useState([]);
+
   useEffect(() => {
     const getCart=async()=>{
 const response=await axios
@@ -26,8 +28,8 @@ const response=await axios
         <Route index element={<HomePage cart={cart} />} />
         <Route path="checkout" element={<CheckoutPage cart={cart} />} />
         <Route path="orders" element={<OrdersPage cart={cart} />} />
-        <Route path="tracking" element={<TrackingPage />} />
-        <Route path="*" element={<NotFound />} />
+        <Route   path="/tracking/:orderId/:productId" element={<TrackingPage cart={cart} />} />
+        <Route path="*" element={<NotFound cart={cart} />} />
       </Routes>
     </>
   );

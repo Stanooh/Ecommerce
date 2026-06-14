@@ -17,6 +17,8 @@ const [products,setProducts]=useState([]);
 useEffect(()=>{
 const getHomeData=async()=>{
   const response= await axios.get('/api/products');
+
+  
 setProducts(response.data)
 }
 

@@ -11,9 +11,10 @@ import searchIcon  from '../assets/images/icons/search-icon.png'
 import './Header.css';
  
  export function Header({cart}) {
+ 
 let totalQuantity=0;
 
-cart.forEach((cartItem)=>{
+cart?.forEach((cartItem)=>{
   totalQuantity+=cartItem.quantity;
 })
 

@@ -7,7 +7,7 @@ import  mobileLogo from '../../assets/images/mobile-logo.png'
 
 
 
-export function CheckoutHeader(){
+export function CheckoutHeader({cart}){
     return(
       <div className="checkout-header">
         <div className="header-content">
@@ -21,7 +21,7 @@ export function CheckoutHeader(){
           <div className="checkout-header-middle-section">
             Checkout (
             <Link className="return-to-home-link" to="/">
-              3 items
+            {cart.quantity}
             </Link>
             )
           </div>
