@@ -32,7 +32,7 @@ setTimeout(()=>{
 
 
     return(
-           <div className="product-container">
+           <div className="product-container" data-testid="product-container">
                     <div className="product-image-container">
                       <img className="product-image" data-testid="product-image" src={product.image} />
                     </div>
